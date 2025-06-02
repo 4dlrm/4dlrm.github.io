@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="We introduce 4D-LRM, the first large-scale 4D reconstruction model that takes input from unconstrained views and timestamps and renders arbitrary novel view-time combinations.">
+  <meta name="keywords" content="4D-LRM, 4D Reconstruction, 4D Rendering, 4D Animation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>4D-LRM: Large Space-Time Reconstruction Model From and To Any View at Any Time</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -42,78 +42,52 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">4D-LRM: Large Space-Time Reconstruction Model From and To Any View at Any Time</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://mars-tin.github.io/">Ziqiao Ma</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://yui010206.github.io/">Shoubin Yu</a><sup>1,3</sup>,</span>
+          </div>
+          <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
+              <a href="https://xuweiyichen.github.io/">Xuweiyi Chen</a><sup>4</sup>,</span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
+              <a href="https://sai-bi.github.io/">Sai Bi</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
+              <a href="https://kai-46.github.io/website/">Kai Zhang</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
+              <a href="https://chenziwe.com/">Ziwen Chen</a><sup>1,5</sup>,</span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://sihanxu.github.io/">Sihan Xu</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://jedyang.com/">Jianing Yang</a><sup>1,2</sup>,</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://zexiangxu.github.io/">Zexiang Xu</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="http://www.kalyans.org/">Kalyan Sunkavalli</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.cs.unc.edu/~mbansal/">Mohit Bansal</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://web.eecs.umich.edu/~chaijy/">Joyce Chai</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.cs.unc.edu/~airsplay/">Hao Tan</a><sup>1</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Adobe Research,</span>
+            <span class="author-block"><sup>2</sup>University of Michigan,</span>
+            <span class="author-block"><sup>3</sup>UNC Chapel Hill,</span>
+            <span class="author-block"><sup>4</sup>University of Virginia,</span>
+            <span class="author-block"><sup>5</sup>Oregon State University</span>
           </div>
 
           <div class="column has-text-centered">
@@ -128,25 +102,6 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/google/nerfies"
@@ -154,7 +109,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (Coming Soon)</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
@@ -166,83 +121,9 @@
                   </span>
                   <span>Data</span>
                   </a>
+              </span>
             </div>
-
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
         </div>
       </div>
     </div>
@@ -252,37 +133,28 @@
 
 <section class="section">
   <div class="container is-max-desktop">
+    <!-- Teaser Image. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <img src="./static/images/teaser.jpg" alt="Teaser Image" style="width:100%;">
+        <p class="caption">
+          Large Space-Time Reconstruction Model (<span class="dnerf">4D-LRM</span>) is a data-driven 4D reconstruction model that takes sparse input views at any time and renders arbitrary novel view-time combinations.
+        </p>
+      </div>
+    </div>
+    <!--/ Teaser Image. -->
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Can we scale 4D pretraining to learn general space-time representations that reconstruct an object from a few views at some times to any view at any time?
+            We provide an affirmative answer with <span class="dnerf">4D-LRM</span>, the first large-scale 4D reconstruction model that takes input from unconstrained views and timestamps and renders arbitrary novel view-time combinations.
+            Unlike prior 4D approaches, e.g., optimization-based, geometry-based, or generative, that struggle with efficiency, generalization, or faithfulness, <span class="dnerf">4D-LRM</span> learns a unified space-time representation and directly predicts per-pixel 4D Gaussian primitives from posed image tokens across time, enabling fast, high-quality rendering at, in principle, infinite frame rate.
+            Our results demonstrate that scaling spatiotemporal pretraining enables accurate and efficient 4D reconstruction.
+            We show that <span class="dnerf">4D-LRM</span> generalizes to novel objects, interpolates across time, and handles diverse camera setups.
+            It reconstructs 24-frame sequences in one forward pass with less than 1.5 seconds on a single A100 GPU.
           </p>
         </div>
       </div>
@@ -292,10 +164,13 @@
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <h2 class="title is-3">Key Insights</h2>
+        <div class="content has-text-justified">
+          <ol>
+            <li><span class="dnerf">4D-LRM</span> is the first large-scale model to reconstruct dynamic objects from sparse, posed views across arbitrary times and viewpoints.</li>
+            <li>It predicts 4D Gaussian primitives directly from multi-view tokens, enabling fast, high-quality 4D reconstruction.</li>
+            <li>It scales effectively with data and model size, and outperforms baselines with strong generalization and efficient inference.</li>
+          </ol>
         </div>
       </div>
     </div>
@@ -306,137 +181,115 @@
 
 <section class="section">
   <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">4D-LRM Methods</h2>
 
+    <!-- Generative Methods -->
     <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
+      <div class="column is-four-fifths">
         <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
+          <h3 class="title is-4">Generative 4D Modeling</h3>
+          <p>
+            Prior methods like L4GM and SV4D rely on single monocular video input and generative priors to synthesize novel views,
+            typically for the first frame only. These methods aim for perceptual plausibility but lack consistent geometry or
+            generalization across viewpoints and timestamps.
+          </p>
+          <figure>
+            <img src="./static/images/compare-l4gm.jpg" alt="Generative 4D Modeling">
+            <figcaption>Figure 1a: Generative 4D Modeling.</figcaption>
+          </figure>
         </div>
-        <!--/ Re-rendering. -->
-
       </div>
     </div>
-    <!--/ Animation. -->
 
-
-    <!-- Concurrent Work. -->
+    <!-- Ours: 4D-LRM -->
     <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
+      <div class="column is-four-fifths">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Ours: Generic 4D Reconstruction</h3>
+          <p>
+            In contrast, our model (4D-LRM) reconstructs dynamic scenes directly from posed views at sparse timestamps,
+            and supports rendering at any novel view-time pair. It learns a unified space-time representation that enables
+            efficient, faithful 4D reconstruction across diverse camera configurations.
+          </p>
+          <figure>
+            <img src="./static/images/compare-4dlrm.jpg" alt="Generic 4D Reconstruction">
+            <figcaption>Figure 1b: Generic 4D Reconstruction.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
 
-        <div class="content has-text-justified">
+    <!-- Model Architecture -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Unified Space-Time Modeling</h3>
           <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
+            <strong>4D-LRM</strong> learns a unified space-time representation by predicting <em>anisotropic 4D Gaussians</em> from a set of posed images with timestamps.
+            Each image is patchified and embedded with both <strong>pose</strong> and <strong>time</strong> cues, producing tokens that are processed by a Transformer.
+            These tokens are decoded into 4D Gaussian primitives, which enable fast, high-quality rendering at any viewpoint and timestamp.
+          </p>
+          <figure>
+            <img src="./static/images/method.jpg" height="80%" alt="4D-LRM Overview">
+            <figcaption>Figure: Overview of the 4D-LRM architecture. We tokenize input frames and regress 4D Gaussian primitives via a Transformer decoder.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- Evaluation Protocol -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Flexible Input Configurations</h3>
+          <p>
+            During evaluation, <strong>4D-LRM</strong> is tested under diverse camera setups—ranging from dense canonical views to sparse, rotating cameras and monocular video.
+            It generalizes robustly across configurations, achieving strong performance even with just a few views at sparse timestamps.
+          </p>
+          <figure>
+            <img src="./static/images/evaluation.jpg" alt="Evaluation Protocols">
+            <figcaption>Figure: Evaluation settings with varying view-time coverage. 4D-LRM handles all settings with a single model.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- Training Objective -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Rendering-Based Supervision</h3>
+          <p>
+            We train 4D-LRM by supervising rendered images from predicted 4D Gaussians using a combination of 
+            <strong>Mean Squared Error (MSE)</strong> and <strong>Perceptual Loss</strong>. 
+            This encourages both geometric accuracy and high visual fidelity.
+            All supervision views are rendered through a differentiable rasterizer based on conditional 3D Gaussian splatting.
           </p>
           <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+            Our training loss balances low-level reconstruction and high-level appearance matching, enabling 
+            <em>faithful space-time reconstructions</em> across diverse input configurations.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
 
+    <!-- Free Gaussians -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-centered">
+          <h3 class="title is-4">Optional Free Gaussians</h3>
+          <p>
+            In addition to pixel-aligned Gaussians, 4D-LRM supports a set of <strong>learnable free Gaussians</strong> 
+            that are not tied to any input pixel or pose. These tokens allow the model to hallucinate geometry beyond the visible input,
+            especially useful in sparse-view or generative settings.
+          </p>
+          <p>
+            This flexibility makes 4D-LRM applicable to <em>both reconstruction and 4D asset generation</em>, adapting 
+            to settings with limited camera coverage or high uncertainty.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -444,11 +297,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{ma2023large,
+  author    = {Ziqiao Ma and Shoubin Yu and Xuweiyi Chen and Sai Bi and Kai Zhang and Ziwen Chen and Sihan Xu and Jianing Yang and Zexiang Xu and Kalyan Sunkavalli and Mohit Bansal and Joyce Chai and Hao Tan},
+  title     = {4D-LRM: Large Space-Time Reconstruction Model From and To Any View at Any Time},
+  year      = {2025},
+  journal   = {arXiv preprint},
 }</code></pre>
   </div>
 </section>
@@ -456,7 +309,7 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
+    <!-- <div class="content has-text-centered">
       <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
@@ -464,7 +317,7 @@
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
-    </div>
+    </div> -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">

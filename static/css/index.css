@@ -155,3 +155,11 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.publication-links {
+  margin-bottom: 0;
+}
+
+.section {
+  padding-top: 0rem;
+}
