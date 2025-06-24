@@ -135,35 +135,34 @@
 
           </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                      
-                      <span class="link-block">
-                      <a href="https://arxiv.org/abs/2506.18890" class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-                      
-                    <span class="link-block">
-                      <a href="https://github.com/Mars-tin/4D-LRM" class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fab fa-github"></i>
-                        </span>
-                        <span>Code</span>
-                      </a>
-                    </span>
+              <div class="publication-links">
+                
+                <span class="link-block">
+                <a href="https://arxiv.org/abs/2506.18890" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+                
+              <span class="link-block">
+                <a href="https://github.com/Mars-tin/4D-LRM" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
 
-                    <!-- <span class="link-block">
-                      <a href="https://huggingface.co/datasets/Shoubin/VEGGIE-Bench" class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <img style="max-width: 16px;" src="./static/hf_fa.ico" alt="Hugging Face"/>
-                        </span>
-                        <span>Data</span>
-                      </a>
-                    </span> -->
+              <!-- <span class="link-block">
+                <a href="https://huggingface.co/datasets/Shoubin/VEGGIE-Bench" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <img style="max-width: 16px;" src="./static/hf_fa.ico" alt="Hugging Face"/>
+                  </span>
+                  <span>Data</span>
+                </a>
+              </span> -->
 
             </div>
           </div>
@@ -605,6 +604,58 @@
   </div>
 
 </section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-2">Scaling Behaviors</h2>
+
+        <h4 class="title is-4">Training-Time Scaling</h4>
+
+        <div class="content has-text-justified">
+          We observe that increasing the number of target views slightly improves convergence speed, though at the cost of increased iteration time. 
+          Introducing free Gaussians from scratch does not significantly impact reconstruction quality but substantially slows down training. 
+          Additionally, we find that the 4DGS representation with 3DGS + HexPlane is less expressive than the unified space-time formulation, which informed our final design choice.
+          We also note that enforcing strict temporal alignment degrades performance, whereas pixel alignment improves reconstruction quality. 
+          This supports our earlier observation that 4D-LRM effectively redistributes Gaussians to unseen time intervals to handle sparse temporal supervision.
+        </div>
+
+        <div class="content has-text-justified">
+          <img src="./static/images/train-scale.png">
+        </div>
+
+        <div class="content has-text-justified">
+          <ol>
+            <li><strong>4D-LRM-Base</strong>: Transformer with 768 hidden dimensions, 12 layers, and 12 attention heads, trained with 12 random input views and 12 random target views. No free Gaussians.</li>
+            <li><strong>#Target x 2</strong>: Trained with 12 random input views and 24 random target views.</li>
+            <li><strong>w/ Hexplane</strong>: Instead of unified space-time representation, an alternative 4DGS representation with decomposed neural voxel encoding inspired by HexPlane.</li>
+            <li><strong>w/ Temp Align</strong>: Similar to the idea of pixel-aligned Gaussians, we force <em>μ<sub>T</sub></em> to the input frame time, reducing the parameterization to <em>dim<sub>4DGS</sub> = 19</em>.</li>
+            <li><strong>w/ Free GS</strong>: Trained with <em>N = 1024</em> free Gaussian tokens from scratch.</li>
+          </ol>
+        </div>
+        
+        <h4 class="title is-4">Inference-Time Scaling</h4>
+
+        <div class="content has-text-justified">
+          We analyze inference-time scaling as the number of input views varies. 
+          In terms of PSNR and SSIM, performance improves with more input views and peaks at 48, after which it begins to decline slightly. 
+          We attribute this to two factors: (1) excessive Gaussians may overcrowd the 4D representation, reducing its quality, and (2) the Transformer struggles with very long input sequences.
+          This observation suggests a promising future direction: designing 4D-LRM variants that can handle longer contexts with hybrid models (<a href="https://arthurhero.github.io/projects/llrm/index.html">Long-LRM</a>) and incorporate test-time training (<a href="https://tianyuanzhang.com/projects/ttt-done-right/">LaCT</a>).
+        </div>
+
+        <div class="content has-text-justified">
+          <img src="./static/images/inference-scale.png">
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
