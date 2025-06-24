@@ -2,179 +2,169 @@
 <html>
 <head>
   <meta charset="utf-8">
-
-  <meta property="og:title" content="4D-LRM"/>
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="4D-LRM: Large Space-Time Reconstruction Model From and To Any View at Any Time"/>
   <meta property="og:description" content="4D-LRM"/>
-  <meta property="og:url" content="https://4dlrm.github.io/"/>
-
+  <meta property="og:url" content="https://4D-LRM.github.io/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/4dlrm-logo.png" />
-  <meta property="og:image:width" content="600"/>
-  <meta property="og:image:height" content="600"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
 
-  <meta name="description"
-        content="We introduce 4D-LRM, the first large-scale 4D reconstruction model that takes input from unconstrained views and timestamps and renders arbitrary novel view-time combinations.">
-  <meta name="keywords" content="4DLRM, 4D-LRM, 4D Reconstruction, 4D Rendering, Space-Time Modeling, Dynamic Scene Reconstruction, Gaussian Splatting">
+
+  <meta name="twitter:title" content="4D-LRM: Large Space-Time Reconstruction Model From and To Any View at Any Time">
+  <meta name="twitter:description" content="4D-LRM: Large Space-Time Reconstruction Model From and To Any View at Any Time">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="./static/images/teaser.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="4D-LRM, Large Space-Time Reconstruction Model, 3D Model, 4D Reconstruction">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>4D-LRM: Large Space-Time Reconstruction Model From and To Any View at Any Time</title>
-  
+
+
+  <title>4D-LRM</title>
   <link href="static/images/4dlrm-logo.png" rel="icon">
   <link href="static/images/4dlrm-logo.png" rel="apple-touch-icon">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
-
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.css">
+  <link rel="stylesheet" href="static/css/index.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        processEscapes: true
+	    }
+	});
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+    </script>
+    <script>
+      window.onload = function() {
+          window.scrollTo(0, 0);
+      };
+  </script>
+<script src="static/js/index.js"></script>
+<link rel="icon" type="image/x-icon" href="static/images/4dlrm-logo.png">
 </head>
-<body>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">
-            <img src="static/images/4dlrm-logo.png" alt="Icon" style="height:1.7em; vertical-align:middle; margin-right:0.05em;">
-            4D-LRM:<br>
-            Large Space-Time Reconstruction Model From and To Any View at Any Time</h1>
-          <div class="is-size-5 publication-authors">
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              <img src="static/images/4dlrm-logo.png" alt="Icon" style="height:1.7em; vertical-align:middle; margin-right:0.05em; border: none; box-shadow: none; padding: 0; outline: none;">
+              4D-LRM:<br>
+              Large Space-Time Reconstruction Model From and To Any View at Any Time</h1>              
+          <div class="is-size-4 publication-authors">
+            <span class="author-block" , style="padding-left:30px">
+              <a href="https://mars-tin.github.io/">Ziqiao Ma<sup>1,2</sup></a>
+            </span>&nbsp;
+            <span class="author-block" , style="padding-left:30px">
+              <a href="https://xuweiyichen.github.io/" target="_blank">Xuweiyi Chen<sup>4</sup></a>
+            </span>&nbsp; &nbsp;
             <span class="author-block">
-              <a href="https://mars-tin.github.io/">Ziqiao Ma</a><sup>1,2</sup>,</span>
-            <span class="author-block">
-              <a href="https://xuweiyichen.github.io/">Xuweiyi Chen</a><sup>4</sup>,</span>
-            <span class="author-block">
-              <a href="https://yui010206.github.io/">Shoubin Yu</a><sup>1,3</sup>,</span>
-          </div>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://sai-bi.github.io/">Sai Bi</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://kai-46.github.io/website/">Kai Zhang</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://chenziwe.com/">Ziwen Chen</a><sup>1,5</sup>,</span>
-            <span class="author-block">
-              <a href="https://sihanxu.github.io/">Sihan Xu</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jedyang.com/">Jianing Yang</a><sup>1,2</sup>,</span>
-          </div>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://zexiangxu.github.io/">Zexiang Xu</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="http://www.kalyans.org/">Kalyan Sunkavalli</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://www.cs.unc.edu/~mbansal/">Mohit Bansal</a><sup>3</sup>,</span>
-            <span class="author-block">
-              <a href="https://web.eecs.umich.edu/~chaijy/">Joyce Chai</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://www.cs.unc.edu/~airsplay/">Hao Tan</a><sup>1</sup>
+              <a href="https://yui010206.github.io/" target="_blank">Shoubin Yu<sup>1,3</sup></a>
+            </span> 
+
+            <br>
+            <span class="author-block" , style="padding-left:30px">
+              <a href="https://sai-bi.github.io/">Sai Bi<sup>1</sup></a>
+            </span>
+            <span class="author-block" , style="padding-left:30px">
+              <a href="https://cszn.github.io/">Kai Zhang<sup>1</sup></a>
+            </span>
+            <span class="author-block" , style="padding-left:30px">
+              <a href="https://chenziwe.com/">Ziwen Chen<sup>1,5</sup></a>
+            </span>
+            <span class="author-block" , style="padding-left:30px">
+              <a href="https://sihanxu.github.io/">Sihan Xu<sup>2</sup></a>
+            </span>
+            <span class="author-block" , style="padding-left:30px">
+              <a href="https://jedyang.com/">Jianing Yang<sup>1,2</sup></a>
+            </span> <br>
+
+            <span class="author-block" , style="padding-left:30px">
+              <a href="https://zexiangxu.github.io/">Zexiang Xu<sup>1</sup></a>
+            </span>
+
+            <span class="author-block" , style="padding-left:30px">
+              <a href="http://www.kalyans.org/">Kalyan Sunkavalli<sup>1</sup></a>
+            </span>
+
+            <span class="author-block" , style="padding-left:30px">
+              <a href="https://www.cs.unc.edu/~mbansal/">Mohit Bansal<sup>3</sup></a>
+            </span>
+
+            <span class="author-block" , style="padding-left:30px">
+              <a href="https://web.eecs.umich.edu/~chaijy/">Joyce Chai<sup>2</sup></a>
+            </span>
+
+            <span class="author-block" , style="padding-left:30px">
+              <a href="https://www.cs.unc.edu/~airsplay/">Hao Tan<sup>1</sup></a>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Adobe Research,</span>
-            <span class="author-block"><sup>2</sup>University of Michigan,</span><br>
-            <span class="author-block"><sup>3</sup>UNC Chapel Hill,</span>
-            <span class="author-block"><sup>4</sup>University of Virginia,</span>
-            <span class="author-block"><sup>5</sup>Oregon State University</span>
+            <span class="author-block">Adobe Research<sup>1</sup></span> &nbsp;&nbsp;&nbsp;
+            <span class="author-block">University of Michigan<sup>2</sup></span> &nbsp;&nbsp;&nbsp; <br>
+            <span class="author-block">UNC Chapel Hill<sup>3</sup></span> &nbsp;&nbsp;&nbsp; 
+            <span class="author-block">University of Virginia<sup>4</sup></span> &nbsp;&nbsp;&nbsp; 
+            <span class="author-block">Oregon State University<sup>5</sup></span> &nbsp;&nbsp;&nbsp; 
+
           </div>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2404.19702"
-                   class="external-link button is-normal is-rounded is-dark">
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                
+                <span class="link-block">
+                <a href="https://arxiv.org/abs/2506.18890" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                    <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Paper</span>
                 </a>
               </span>
-              <!-- Code Link. -->
+                
               <span class="link-block">
-                <a href="https://github.com/Mars-tin/4D-LRM"
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="https://github.com/Mars-tin/4D-LRM" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fab fa-github"></i>
+                    <i class="fab fa-github"></i>
                   </span>
-                  <span>Code (Coming Soon)</span>
-                  </a>
+                  <span>Code</span>
+                </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://huggingface.co/Seed42Lab"
-                   class="external-link button is-normal is-rounded is-dark">
+
+              <!-- <span class="link-block">
+                <a href="https://huggingface.co/datasets/Shoubin/VEGGIE-Bench" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="far fa-images"></i>
+                    <img style="max-width: 16px;" src="./static/hf_fa.ico" alt="Hugging Face"/>
                   </span>
                   <span>Data</span>
-                  </a>
-              </span>
-            </div>
-          </div>
+                </a>
+              </span> -->
 
-          <!-- Interactive Viewer -->
-          <div class="columns is-centered">
-            <div class="column is-four-fifths">
-              <div class="box">
-                <h3 class="title is-5 has-text-centered">4D Visualization Viewer</h3>
-                <p class="has-text-centered">
-                  Use the interactive viewer below to explore the 4D point clouds. Click and drag to navigate within the scene.
-                </p>
-                <div id="iframe-container" class="iframe-container">
-                  <iframe
-                    id="point-cloud-viewer"
-                    class="iframe"
-                    style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 8px;"
-                    src="https://prime-normal.share.viser.studio"
-                  ></iframe>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="columns is-centered">
-            <div class="column is-four-fifths">
-              <div class="box">
-                <!-- <h3 class="title is-5 has-text-centered">Visualization Viewer</h3> -->
-                <!-- <p class="has-text-centered">
-                  Use the interactive viewer below to explore the 4D point cloud. Click and drag to navigate within the scene.
-                </p> -->
-                <div id="iframe-container-2" class="iframe-container">
-                  <iframe
-                    id="point-cloud-viewer-2"
-                    class="iframe"
-                    style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 8px;"
-                    src="https://jax-servo.share.viser.studio"
-                  ></iframe>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -184,213 +174,528 @@
 </section>
 
 
+
+<section class="hero is-small">
+  <div class="body">
+    <div class="container">
+      <h2 class="title is-3">TL;DR</h2>
+      
+      <div class="content has-text-justified" style="margin: auto; width: 70%;">
+        We introduce Large Space-Time Reconstruction Model (4D-LRM), a data-driven 4D reconstruction model that takes sparse input views at any time and renders arbitrary novel view-time combinations.
+      </div>
+      <center>
+        <video width="70%" controls>
+          <source src="./static/teaser.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </center>
+
+    </div>
+  </div>
+</section>
+
+
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Teaser Image. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <img src="./static/images/teaser.jpg" alt="Teaser Image" style="width:100%;">
-        <p class="caption">
-          Large Space-Time Reconstruction Model (<span class="dnerf">4D-LRM</span>) is a data-driven 4D reconstruction model that takes sparse input views at any time and renders arbitrary novel view-time combinations.
-        </p>
-      </div>
-    </div>
-    <!--/ Teaser Image. -->
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Can we scale 4D pretraining to learn general space-time representations that reconstruct an object from a few views at some times to any view at any time?
-            We provide an affirmative answer with <span class="dnerf">4D-LRM</span>, the first large-scale 4D reconstruction model that takes input from unconstrained views and timestamps and renders arbitrary novel view-time combinations.
-            Unlike prior 4D approaches, e.g., optimization-based, geometry-based, or generative, that struggle with efficiency, generalization, or faithfulness, <span class="dnerf">4D-LRM</span> learns a unified space-time representation and directly predicts per-pixel 4D Gaussian primitives from posed image tokens across time, enabling fast, high-quality rendering at, in principle, infinite frame rate.
-            Our results demonstrate that scaling spatiotemporal pretraining enables accurate and efficient 4D reconstruction.
-            We show that <span class="dnerf">4D-LRM</span> generalizes to novel objects, interpolates across time, and handles diverse camera setups.
-            It reconstructs 24-frame sequences in one forward pass with less than 1.5 seconds on a single A100 GPU.
+            Can we scale 4D pretraining to learn general space-time representations that reconstruct
+            an object from a few views at some times to any view at any time? We provide
+            an affirmative answer with 4D-LRM, the first large-scale 4D reconstruction model
+            that takes input from unconstrained views and timestamps and renders arbitrary
+            novel view-time combinations. Unlike prior 4D approaches, e.g., optimizationbased,
+            geometry-based, or generative, that struggle with efficiency, generalization,
+            or faithfulness, 4D-LRM learns a unified space-time representation and directly
+            predicts per-pixel 4D Gaussian primitives from posed image tokens across time,
+            enabling fast, high-quality rendering at, in principle, infinite frame rate. Our results
+            demonstrate that scaling spatiotemporal pretraining enables accurate and efficient
+            4D reconstruction. We show that 4D-LRM generalizes to novel objects, interpolates
+            across time, and handles diverse camera setups. It reconstructs 24-frame sequences
+            in one forward pass with less than 1.5 seconds on a single A100 GPU.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
 
-    <!-- Paper video. -->
+  </div>
+</section>
+
+
+
+<section class="section hero">
+  <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Key Insights (TL;DR)</h2>
+      <div class="column">
+
+        <h2 class="title is-3">Key Insights</h2>
+
         <div class="content has-text-justified">
           <ol>
-            <li><span class="dnerf">4D-LRM</span> is the first large-scale model to reconstruct dynamic objects from sparse, posed views across arbitrary times and viewpoints.</li>
-            <li>It predicts 4D Gaussian primitives directly from multi-view tokens, enabling fast, high-quality 4D reconstruction.</li>
-            <li>It scales effectively with data and model size with strong generalization and efficient inference.</li>
+            <li><span class="dnerf">4D-LRM</span> adopts a clean and minimal Transformer design to reconstruct dynamic objects from sparse, posed views across arbitrary times and viewpoints.</li>
+            <li><span class="dnerf">4D-LRM</span> unifies space and time by predicting 4D Gaussian primitives directly from multi-view tokens.</li>
+            <li><span class="dnerf">4D-LRM</span> scales effectively with data and model size with strong generalization and efficient inference.</li>
           </ol>
         </div>
+
+        <div class="content has-text-justified">
+          <img src="./static/images/teaser.png">
+        </div>
+        
+        <h2 class="title is-3">Method</h2>
+
+        <div class="content has-text-justified">
+          4D-LRM adopts a unified treatment of space and time, representing
+          a dynamic object as a cloud of anisotropic 4D Gaussians. We train a simple Transformer to
+          regress 4D Gaussian primitives from a set of images with camera poses and timestamps. Each input
+          image is tokenized by patchifying the temporally posed frames. The resulting multi-view image
+          tokens are concatenated in temporal order and passed through a series of transformer blocks. Optional
+          set of N learnable free Gaussian tokens append the image tokens for greater generative flexibility.
+        </div>
+        <div class="content has-text-justified">
+          <img src="./static/images/method.png">
+        </div>
+
+        
+        <h2 class="title is-3 has-text-centered">4D Point Cloud Visualization</h2>
+        
+        <div class="columns is-centered has-text-centered">
+          Use the viser-based interactive viewer below to explore the 4D point clouds. 
+          Click and drag to navigate within the scene.
+        </div>
+
+          <!-- Interactive Viewer -->
+
+        <div class="columns is-centered is-variable is-6">
+          <div class="column">
+            <div class="box">
+              <div class="iframe-container">
+                <iframe
+                  id="point-cloud-viewer"
+                  class="iframe"
+                  style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 8px;"
+                  src="https://historic-scale.share.viser.studio"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="box">
+              <div class="iframe-container">
+                <iframe
+                  id="point-cloud-viewer-2"
+                  class="iframe"
+                  style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 8px;"
+                  src="https://camera-drive.share.viser.studio"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-    <!--/ Paper video. -->
   </div>
+</section>
+
+
+
+<section>
+
+  <h2 class="title is-3 has-text-centered">4D-LRM Results (Consistent4D)</h2>
+
+  <div class="columns is-centered has-text-centered">
+    256 x 256 resolution, 24 frames x 2, alternating canonical views as input.
+  </div>
+
+  <center>
+    <a href="gifs/example-main-1/input.png">Input Images </a> / 
+    <a href="https://mars-tin.github.io/tools/gauss_viewer/4dgs_viewer.html?url=https://huggingface.co/datasets/marstin/4D-LRM-Stuff/resolve/main/consistent4d/Aurorus_24_47/gaussians_filtered.ply">Open Interactive Gaussian Viewer (Beta ver.)</a>
+  </center>
+  <div class="columns is-gapless is-vcentered is-mobile" style="justify-content:center;">
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-1/front.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Front View</p>
+    </div>
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-1/back.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Back View</p>
+    </div>
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-1/left.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Left View</p>
+    </div>
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-1/right.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Right View</p>
+    </div>
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-1/turntable.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Turntable View</p>
+    </div>
+
+  </div>
+
+
+
+  <center>
+    <a href="gifs/example-main-2/input.png">Input Images </a> / 
+    <a href="https://mars-tin.github.io/tools/gauss_viewer/4dgs_viewer.html?url=https://huggingface.co/datasets/marstin/4D-LRM-Stuff/resolve/main/consistent4d/Guppie_0_23/gaussians_filtered.ply">Open Interactive Gaussian Viewer (Beta ver.)</a>
+  </center>
+  <div class="columns is-gapless is-vcentered is-mobile" style="justify-content:center;">
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-2/front.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Front View</p>
+    </div>
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-2/back.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Back View</p>
+    </div>
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-2/left.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Left View</p>
+    </div>
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-2/right.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Right View</p>
+    </div>
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-2/turntable.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Turntable View</p>
+    </div>
+
+  </div>
+
+
+
+  <center>
+    <a href="gifs/example-main-3/input.png">Input Images </a> / 
+    <a href="https://mars-tin.github.io/tools/gauss_viewer/4dgs_viewer.html?url=https://huggingface.co/datasets/marstin/4D-LRM-Stuff/resolve/main/consistent4d/Pistol_24_47/gaussians_filtered.ply">Open Interactive Gaussian Viewer (Beta ver.)</a>
+  </center>
+  <div class="columns is-gapless is-vcentered is-mobile" style="justify-content:center;">
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-3/front.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Front View</p>
+    </div>
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-3/back.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Back View</p>
+    </div>
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-3/left.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Left View</p>
+    </div>
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-3/right.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Right View</p>
+    </div>
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-3/turntable.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Turntable View</p>
+    </div>
+
+  </div>
+
+
+
+  <center>
+    <a href="gifs/example-main-4/input.png">Input Images </a> / 
+    <a href="https://mars-tin.github.io/tools/gauss_viewer/4dgs_viewer.html?url=https://huggingface.co/datasets/marstin/4D-LRM-Stuff/resolve/main/consistent4d/Trump_0_23/gaussians_filtered.ply">Open Interactive Gaussian Viewer (Beta ver.)</a>
+  </center>
+  <div class="columns is-gapless is-vcentered is-mobile" style="justify-content:center;">
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-4/front.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Front View</p>
+    </div>
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-4/back.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Back View</p>
+    </div>
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-4/left.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Left View</p>
+    </div>
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-4/right.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Right View</p>
+    </div>
+
+    <div class="column has-text-centered is-narrow">
+      <video src="gifs/example-main-4/turntable.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Turntable View</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section hero is-light">
+  <h2 class="title is-3 has-text-centered">4D-LRM Results (Objaverse Test)</h2>
+
+  <div class="columns is-centered has-text-centered">
+    256 x 256 resolution, 24 frames, alternating canonical views as input.
+  </div>
+
+  <div class="columns is-gapless is-vcentered is-mobile" style="justify-content:center;">
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example1/front.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Front View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example1/back.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Back View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example1/left.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Left View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example1/right.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Right View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example1/turntable.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Turntable View</p>
+    </div>
+  </div>
+  <br>
+
+  <div class="columns is-gapless is-vcentered is-mobile" style="justify-content:center;">
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example2/front.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Front View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example2/back.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Back View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example2/left.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Left View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example2/right.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Right View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example2/turntable.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Turntable View</p>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="columns is-gapless is-vcentered is-mobile" style="justify-content:center;">
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example3/front.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Front View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example3/back.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Back View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example3/left.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Left View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example3/right.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Right View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example3/turntable.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Turntable View</p>
+    </div>
+  </div> <br>
+
+
+
+  <div class="columns is-gapless is-vcentered is-mobile" style="justify-content:center;">
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example5/front.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Front View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example5/back.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Back View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example5/left.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Left View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example5/right.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Right View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example5/turntable.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Turntable View</p>
+    </div>
+  </div>
+
+
+  <div class="columns is-gapless is-vcentered is-mobile" style="justify-content:center;">
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example6/front.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Front View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example6/back.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Back View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example6/left.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Left View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example6/right.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Right View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example6/turntable.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Turntable View</p>
+    </div>
+  </div>
+
+
+  <div class="columns is-gapless is-vcentered is-mobile" style="justify-content:center;">
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example7/front.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Front View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example7/back.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Back View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example7/left.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Left View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example7/right.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Right View</p>
+    </div>
+    <div class="column has-text-centered is-narrow">
+      <video src="./gifs/example7/turntable.mp4" autoplay muted loop playsinline></video>
+      <p class="has-text-centered">Turntable View</p>
+    </div>
+  </div>
+
 </section>
 
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Methods</h2>
 
-    <!-- Generative Methods -->
-    <div class="columns is-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <div class="content has-text-centered">
-          <h3 class="title is-4">Generative 4D Modeling</h3>
-          <p>
-            Prior methods like L4GM and SV4D rely on single monocular video input and generative priors to synthesize novel views,
-            typically for the first frame only. These methods aim for perceptual plausibility but lack consistent geometry or
-            generalization across viewpoints and timestamps.
-          </p>
-          <figure>
-            <img src="./static/images/compare-l4gm.jpg" alt="Generative 4D Modeling">
-            <figcaption>Figure 1a: Generative 4D Modeling.</figcaption>
-          </figure>
+        <h2 class="title is-2">Scaling Behaviors</h2>
+
+        <h4 class="title is-4">Training-Time Scaling</h4>
+
+        <div class="content has-text-justified">
+          We observe that increasing the number of target views slightly improves convergence speed, though at the cost of increased iteration time. 
+          Introducing free Gaussians from scratch does not significantly impact reconstruction quality but substantially slows down training. 
+          Additionally, we find that the 4DGS representation with 3DGS + HexPlane is less expressive than the unified space-time formulation, which informed our final design choice.
+          We also note that enforcing strict temporal alignment degrades performance, whereas pixel alignment improves reconstruction quality. 
+          This supports our earlier observation that 4D-LRM effectively redistributes Gaussians to unseen time intervals to handle sparse temporal supervision.
         </div>
+
+        <div class="content has-text-justified">
+          <img src="./static/images/train-scale.png">
+        </div>
+
+        <div class="content has-text-justified">
+          <ol>
+            <li><strong>4D-LRM-Base</strong>: Transformer with 768 hidden dimensions, 12 layers, and 12 attention heads, trained with 12 random input views and 12 random target views. No free Gaussians.</li>
+            <li><strong>#Target x 2</strong>: Trained with 12 random input views and 24 random target views.</li>
+            <li><strong>w/ Hexplane</strong>: Instead of unified space-time representation, an alternative 4DGS representation with decomposed neural voxel encoding inspired by HexPlane.</li>
+            <li><strong>w/ Temp Align</strong>: Similar to the idea of pixel-aligned Gaussians, we force <em>μ<sub>T</sub></em> to the input frame time, reducing the parameterization to <em>dim<sub>4DGS</sub> = 19</em>.</li>
+            <li><strong>w/ Free GS</strong>: Trained with <em>N = 1024</em> free Gaussian tokens from scratch.</li>
+          </ol>
+        </div>
+        
+        <h4 class="title is-4">Inference-Time Scaling</h4>
+
+        <div class="content has-text-justified">
+          We analyze inference-time scaling as the number of input views varies. 
+          In terms of PSNR and SSIM, performance improves with more input views and peaks at 48, after which it begins to decline slightly. 
+          We attribute this to two factors: (1) excessive Gaussians may overcrowd the 4D representation, reducing its quality, and (2) the Transformer struggles with very long input sequences.
+          This observation suggests a promising future direction: designing 4D-LRM variants that can handle longer contexts with hybrid models (<a href="https://arthurhero.github.io/projects/llrm/index.html">Long-LRM</a>) and incorporate test-time training (<a href="https://tianyuanzhang.com/projects/ttt-done-right/">LaCT</a>).
+        </div>
+
+        <div class="content has-text-justified">
+          <img src="./static/images/inference-scale.png">
+        </div>
+
       </div>
     </div>
 
-    <!-- Ours: 4D-LRM -->
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <div class="content has-text-centered">
-          <h3 class="title is-4">Ours: Generic 4D Reconstruction</h3>
-          <p>
-            In contrast, our model (4D-LRM) reconstructs dynamic scenes directly from posed views at sparse timestamps,
-            and supports rendering at any novel view-time pair. It learns a unified space-time representation that enables
-            efficient, faithful 4D reconstruction across diverse camera configurations.
-          </p>
-          <figure>
-            <img src="./static/images/compare-4dlrm.jpg" alt="Generic 4D Reconstruction">
-            <figcaption>Figure 1b: Generic 4D Reconstruction.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-
-    <!-- Model Architecture -->
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <div class="content has-text-centered">
-          <h3 class="title is-4">Unified Space-Time Modeling</h3>
-          <p>
-            <strong>4D-LRM</strong> learns a unified space-time representation by predicting <em>anisotropic 4D Gaussians</em> from a set of posed images with timestamps.
-            Each image is patchified and embedded with both <strong>pose</strong> and <strong>time</strong> cues, producing tokens that are processed by a Transformer.
-            These tokens are decoded into 4D Gaussian primitives, which enable fast, high-quality rendering at any viewpoint and timestamp.
-          </p>
-          <figure>
-            <img src="./static/images/method.jpg" height="80%" alt="4D-LRM Overview">
-            <figcaption>Figure: Overview of the 4D-LRM architecture. We tokenize input frames and regress 4D Gaussian primitives via a Transformer decoder.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-
-    <!-- Evaluation Protocol -->
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <div class="content has-text-centered">
-          <h3 class="title is-4">Flexible Input Configurations</h3>
-          <p>
-            During evaluation, <strong>4D-LRM</strong> is tested under diverse camera setups—ranging from dense canonical views to sparse, rotating cameras and monocular video.
-            It generalizes robustly across configurations, achieving strong performance even with just a few views at sparse timestamps.
-          </p>
-          <figure>
-            <img src="./static/images/evaluation.jpg" alt="Evaluation Protocols">
-            <figcaption>Figure: Evaluation settings with varying view-time coverage. 4D-LRM handles all settings with a single model.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-
-    <!-- Training Objective -->
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <div class="content has-text-centered">
-          <h3 class="title is-4">Rendering-Based Supervision</h3>
-          <p>
-            We train 4D-LRM by supervising rendered images from predicted 4D Gaussians using a combination of 
-            <strong>Mean Squared Error (MSE)</strong> and <strong>Perceptual Loss</strong>. 
-            This encourages both geometric accuracy and high visual fidelity.
-            All supervision views are rendered through a differentiable rasterizer based on conditional 3D Gaussian splatting.
-          </p>
-          <p>
-            Our training loss balances low-level reconstruction and high-level appearance matching, enabling 
-            <em>faithful space-time reconstructions</em> across diverse input configurations.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Free Gaussians -->
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <div class="content has-text-centered">
-          <h3 class="title is-4">Optional Free Gaussians</h3>
-          <p>
-            In addition to pixel-aligned Gaussians, 4D-LRM supports a set of <strong>learnable free Gaussians</strong> 
-            that are not tied to any input pixel or pose. These tokens allow the model to hallucinate geometry beyond the visible input,
-            especially useful in sparse-view or generative settings.
-          </p>
-          <p>
-            This flexibility makes 4D-LRM applicable to <em>both reconstruction and 4D asset generation</em>, adapting 
-            to settings with limited camera coverage or high uncertainty.
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{ma2023large,
-  author    = {Ziqiao Ma and Shoubin Yu and Xuweiyi Chen and Sai Bi and Kai Zhang and Ziwen Chen and Sihan Xu and Jianing Yang and Zexiang Xu and Kalyan Sunkavalli and Mohit Bansal and Joyce Chai and Hao Tan},
-  title     = {4D-LRM: Large Space-Time Reconstruction Model From and To Any View at Any Time},
-  year      = {2025},
-  journal   = {arXiv preprint},
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{ma20254dlrm,
+  title={4D-LRM: Large Space-Time Reconstruction Model From and To Any View at Any Time}, 
+  author={Ziqiao Ma and Xuweiyi Chen and Shoubin Yu and Sai Bi and Kai Zhang and Ziwen Chen and Sihan Xu and Jianing Yang and Zexiang Xu and Kalyan Sunkavalli and Mohit Bansal and Joyce Chai and Hao Tan},
+  year={2025},
+  journal={arXiv:2506.18890},
 }</code></pre>
-  </div>
+    </div>
 </section>
+<!--End BibTex citation -->
 
 
-<footer class="footer">
+  <footer class="footer">
   <div class="container">
-    <!-- <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div> -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            This page was built upon the <a href="https://veggie-gen.github.io/">VEGGIE</a> project homepage (using <a href="https://github.com/vinthony/project-page-template">modification version</a> of <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> from <a href="https://github.com/vinthony">vinthony</a>).
+            You are free to borrow this website. We just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
+
         </div>
       </div>
     </div>
   </div>
 </footer>
 
-</body>
-</html>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
