@@ -64,7 +64,7 @@
       };
   </script>
 <script src="static/js/index.js"></script>
-<link rel="icon" type="image/x-icon" href="static/images/veggie.png">
+<link rel="icon" type="image/x-icon" href="static/images/4dlrm-logo.png">
 </head>
 
 <body>
@@ -74,7 +74,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">
-              <img src="static/images/4dlrm-logo.png" alt="Icon" style="height:1.7em; vertical-align:middle; margin-right:0.05em;">
+              <img src="static/images/4dlrm-logo.png" alt="Icon" style="height:1.7em; vertical-align:middle; margin-right:0.05em; border: none; box-shadow: none; padding: 0; outline: none;">
               4D-LRM:<br>
               Large Space-Time Reconstruction Model From and To Any View at Any Time</h1>              
           <div class="is-size-4 publication-authors">
@@ -138,9 +138,8 @@
                   <div class="column has-text-centered">
                     <div class="publication-links">
                       
-                       <!-- ArXiv abstract Link -->
                       <span class="link-block">
-                      <a href="https://arxiv.org/abs/2503.14350" class="external-link button is-normal is-rounded is-dark">
+                      <a href="https://arxiv.org/abs/2506.18890" class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
@@ -149,7 +148,7 @@
                     </span>
                       
                     <span class="link-block">
-                      <a href="https://github.com//" class="external-link button is-normal is-rounded is-dark">
+                      <a href="https://github.com/Mars-tin/4D-LRM" class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fab fa-github"></i>
                         </span>
@@ -451,72 +450,57 @@
 
   </div>
 
-
-
 </section>
 
-
-<!-- End paper abstract -->
-
-<style>
-  .marquee-container {
-    display: flex;
-    gap: 10px; /* 控制视频之间的间距 */
-    justify-content: center; /* 可选，居中显示 */
-  }
-
-  .marquee-item video {
-    width: 200px; /* 根据需要调整大小 */
-    height: auto;
-    border-radius: 8px;
-  }
-</style>
-
 <section class="section hero is-light">
-  <h2 class="title is-3 has-text-centered">4D-LRM Visualization Gallery</h2>
+  <h2 class="title is-3 has-text-centered">4D-LRM Results (Objaverse Test)</h2>
 
-  <div class="marquee-container">
-    <div class="column has-text-centered" style="width:25%;">
+  <div class="columns is-centered has-text-centered">
+    256 x 256 resolution, 24 frames, alternating canonical views as input.
+  </div>
+
+  <div class="columns is-gapless is-vcentered is-mobile" style="justify-content:center;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example1/front.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Front View</p>
     </div>
-    <div class="column has-text-centered" style="width:25%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example1/back.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Back View</p>
     </div>
-    <div class="column has-text-centered" style="width:25%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example1/left.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Left View</p>
     </div>
-    <div class="column has-text-centered" style="width:25%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example1/right.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Right View</p>
     </div>
-    <div class="column has-text-centered" style="width:25%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example1/turntable.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Turntable View</p>
     </div>
   </div>
   <br>
 
-  <div class="marquee-container">
-    <div class="column has-text-centered" style="width:12.5%;">
+  <div class="columns is-gapless is-vcentered is-mobile" style="justify-content:center;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example2/front.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Front View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example2/back.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Back View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example2/left.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Left View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example2/right.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Right View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example2/turntable.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Turntable View</p>
     </div>
@@ -524,24 +508,24 @@
 
   <br>
 
-  <div class="marquee-container">
-    <div class="column has-text-centered" style="width:12.5%;">
+  <div class="columns is-gapless is-vcentered is-mobile" style="justify-content:center;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example3/front.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Front View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example3/back.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Back View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example3/left.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Left View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example3/right.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Right View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example3/turntable.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Turntable View</p>
     </div>
@@ -549,72 +533,72 @@
 
 
 
-  <div class="marquee-container">
-    <div class="column has-text-centered" style="width:12.5%;">
+  <div class="columns is-gapless is-vcentered is-mobile" style="justify-content:center;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example5/front.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Front View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example5/back.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Back View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example5/left.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Left View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example5/right.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Right View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example5/turntable.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Turntable View</p>
     </div>
   </div>
 
 
-  <div class="marquee-container">
-    <div class="column has-text-centered" style="width:12.5%;">
+  <div class="columns is-gapless is-vcentered is-mobile" style="justify-content:center;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example6/front.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Front View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example6/back.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Back View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example6/left.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Left View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example6/right.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Right View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example6/turntable.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Turntable View</p>
     </div>
   </div>
 
 
-  <div class="marquee-container">
-    <div class="column has-text-centered" style="width:12.5%;">
+  <div class="columns is-gapless is-vcentered is-mobile" style="justify-content:center;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example7/front.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Front View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example7/back.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Back View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example7/left.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Left View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example7/right.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Right View</p>
     </div>
-    <div class="column has-text-centered" style="width:12.5%;">
+    <div class="column has-text-centered is-narrow">
       <video src="./gifs/example7/turntable.mp4" autoplay muted loop playsinline></video>
       <p class="has-text-centered">Turntable View</p>
     </div>
@@ -622,50 +606,15 @@
 
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<section class="section hero">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column">
-        <h2 class="title is-3">Quantative Results</h2>
-        <div class="content has-text-justified">
-          <img src="static/images/result1.png">
-        </div>
-
-        <div class="content has-text-justified">
-          <img src="static/images/result2.png">
-        </div>
-
-        <div class="content has-text-justified">
-          <img src="static/images/result3.png">
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-       
-
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{ma20254d,
+      <pre><code>@article{ma20254dlrm,
   title={4D-LRM: Large Space-Time Reconstruction Model From and To Any View at Any Time}, 
   author={Ziqiao Ma and Xuweiyi Chen and Shoubin Yu and Sai Bi and Kai Zhang and Ziwen Chen and Sihan Xu and Jianing Yang and Zexiang Xu and Kalyan Sunkavalli and Mohit Bansal and Joyce Chai and Hao Tan},
   year={2025},
-  journal={arXiv:2503.14350},
+  journal={arXiv:2506.18890},
 }</code></pre>
     </div>
 </section>
